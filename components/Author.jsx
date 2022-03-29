@@ -11,7 +11,7 @@ const Author = ({ author }) => {
                 alt={author.name}
                 height="100px"
                 width="100px"
-                className="align-middle rounded-full"
+                className="inline object-cover w-16 h-16 mr-2 rounded-full"
             />
         </div>
         <h3 className="my-4 text-xl font-bold text-white">

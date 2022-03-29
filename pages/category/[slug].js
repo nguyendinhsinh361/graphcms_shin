@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 
 import { getCategories, getCategoryPost } from '../../services';
 import { PostCard, Categories, Loader } from '../../components';
+import { FeaturedPosts } from '../../sections'
 
 const CategoryPost = ({ posts }) => {
   const router = useRouter();
@@ -13,11 +14,16 @@ const CategoryPost = ({ posts }) => {
 
   return (
     <div className="container px-10 mx-auto mb-8">
+      <FeaturedPosts/>
       <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
         <div className="col-span-1 lg:col-span-8">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-12">
           {posts.map((post, index) => (
-            <PostCard key={index} post={post.node} />
+            <div className="col-span-1 lg:col-span-6">
+              <PostCard key={index} post={post.node} />
+            </div>
           ))}
+          </div>
         </div>
         <div className="col-span-1 lg:col-span-4">
           <div className="relative lg:sticky top-8">

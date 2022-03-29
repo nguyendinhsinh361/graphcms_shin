@@ -75,13 +75,13 @@ const PostDetail = ({ post }) => {
               alt={post.author.name}
               height="30px"
               width="30px"
-              className="align-middle rounded-full"
+              className="inline object-cover w-16 h-16 mr-2 rounded-full"
             />
             <p className="inline ml-2 text-lg text-gray-700 align-middle">
               {post.author.name}
             </p>
           </div>
-          <div className="font-medium text-gray-700">
+          <div className="font-medium text-gray-700 mt-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="inline w-6 h-6 mr-2 text-pink-500"
